@@ -19,6 +19,22 @@ class UserView {
             return {error: "Payload needs to have valid values"}
         }
     }
+
+    static createUser3(payload) {
+        if (payload.name != undefined){
+            return new UserService(payload.id, payload.username, payload.name)
+        } else {
+            return {error: "Needs to fill all properties"}
+        }
+    }
+
+    static createUser4(payload) {
+        if (payload.name != undefined){
+            return new UserService(payload.id, payload.username, payload.name)
+        } else {
+            return {error: "Needs to fill all properties"}
+        }
+    }
 }
 
 module.exports = UserView
