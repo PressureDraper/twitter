@@ -1,5 +1,5 @@
 class User {
-    constructor(id, username, name, bio){
+    constructor(id, username, name, bio, dateCreated, lastUpdated) {
         this.id = id
         this.username = username
         this.name = name
@@ -7,29 +7,24 @@ class User {
         this.dateCreated = new Date()
         this.lastUpdated = new Date()
     }
-
-    getUsername() {
+    get getUsername(){
         return this.username
-    }
-
-    getBio() {
+    } 
+    get getBio(){
         return this.bio
     }
-
-    getDateCreated() {
+    get getDateCreated(){
         return this.dateCreated
     }
-
-    getLastUpdated() {
+    get getLastUpdated(){
         return this.lastUpdated
     }
-
-    setUsername(newUsername) {
-        this.username = newUsername
+    
+    set setUsername(newUsername){
+        return this.username = newUsername
     }
-
-    setBio(newBio) {
-        this.bio = newBio
+    set setBio(newBio){
+        return this.bio = newBio
     }
 }
 
