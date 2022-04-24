@@ -29,11 +29,8 @@ class UserView {
     }
 
     static createUser4(payload) {
-        if (payload.name != undefined){
-            return new UserService(payload.id, payload.username, payload.name)
-        } else {
-            return {error: "Needs to fill all properties"}
-        }
+        console.log(payload.id)
+        return UserService.create(payload.id, payload.username, payload.name)
     }
 }
 
