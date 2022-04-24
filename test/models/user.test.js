@@ -23,4 +23,15 @@ describe("Unit Tests for User Class", () => {
         expect(user.getDateCreated()).not.toBeUndefined()
         expect(user.getLastUpdated()).not.toBeUndefined()
     });
+    test('3) Add Setters', () => {
+        //Escribimos aqui el código que queremos usar tal cual
+        const user = new User(1, "PressureDraper", "Sahib", "Bio")
+
+        //Validamos que el código funcione de la forma esperada
+        user.setUsername("Logic")
+        expect(user.username).toBe("Logic")
+
+        user.setBio("new bio")
+        expect(user.bio).toBe("new bio")
+    });
 })
